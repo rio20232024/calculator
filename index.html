@@ -3,10 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>this is our first git hub repository</p>
-    <p>i have tested the branch method is very awesome</p>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="result" placeholder="0" readonly />
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="clearScreen()">C</button>
+        <button class="btn" onclick="backspace()">⌫</button>
+        <button class="btn" onclick="appendValue('(')">(</button>
+        <button class="btn" onclick="appendValue(')')">)</button>
+        <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn operator" onclick="appendValue('*')">×</button>
+
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn operator" onclick="appendValue('-')">−</button>
+
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn operator" onclick="appendValue('+')">+</button>
+
+        <button class="btn" onclick="appendValue('0')">0</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+        <button class="btn equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
